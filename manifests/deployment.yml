@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "medcheks-5c20"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "medcheks-5c20"
+  template:
+    metadata:
+      labels:
+        app: "medcheks-5c20"
+    spec:
+      containers:
+        - name: "medcheks-5c20"
+          image: "medcheksdevacr.azurecr.io/medcheks"
+          ports:
+          - containerPort: 80
