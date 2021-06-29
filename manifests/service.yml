@@ -5,7 +5,7 @@ metadata:
     labels:
         app: "medcheks-5c20"
 spec:
-    type: ClusterIP
+    type: Loadbalancer
     ports:
     - port: 80
       targetPort: 80
