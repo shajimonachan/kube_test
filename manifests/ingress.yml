@@ -1,0 +1,17 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+    name: "medcheks-5c20"
+    labels:
+        app: "medcheks-5c20"
+    annotations:
+        kubernetes.io/ingress.class: addon-http-application-routing
+spec:
+    rules:
+        - host: testshaji-medcheks-5c20.ce5a5cf0cea94a23918b.eastus.aksapp.io
+          http:
+            paths:
+            - path: /
+              backend:
+                serviceName: "medcheks-5c20"
+                servicePort: 80
